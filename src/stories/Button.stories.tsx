@@ -22,6 +22,7 @@ export const WithCaret = {
   args: {
     theme: 'secondary',
     text: 'Button',
+    caret: true
   },
 };
 
