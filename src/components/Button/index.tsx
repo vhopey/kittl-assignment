@@ -1,4 +1,5 @@
-import './button.css';
+import './Button.css';
+import '../../index.css'
 
 interface ButtonInterface {
   theme: 'primary' | 'secondary';
@@ -14,7 +15,7 @@ const Button = ({ theme, text, disabled }: ButtonInterface) => {
   return (
     <button
       type="button"
-      className={['button', mode].join(' ')}
+      className={['button', mode, disabled && `${mode}--disabled`].join(' ')}
     >
       {text}
     </button>
