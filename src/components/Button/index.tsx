@@ -9,12 +9,12 @@ interface ButtonInterface {
 }
 
 const Button = ({ theme, text, disabled }: ButtonInterface) => {
-  const mode = theme === 'primary' ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const mode = `button--${theme}`;
 
   return (
     <button
       type="button"
-      className={['storybook-button', mode].join(' ')}
+      className={['button', mode].join(' ')}
     >
       {text}
     </button>

@@ -17,3 +17,17 @@ export const Secondary = {
     text: 'Button',
   },
 };
+
+export const WithCaret = {
+  args: {
+    theme: 'secondary',
+    text: 'Button',
+  },
+};
+
+export const WithIcon = {
+  args: {
+    theme: 'secondary',
+    text: 'Button',
+  },
+};
