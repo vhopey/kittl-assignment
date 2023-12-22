@@ -8,25 +8,11 @@ interface ButtonInterface {
   text: string;
   disabled?: boolean;
   caret?: boolean;
-  // icon
+  icon?: JSX.Element
 };
 
-// add enum for colors
-const getIconColor = (theme: string, disabled: boolean): string => {
-  if(disabled) {
-    return "#979797";
-  }
-
-  if(theme === "secondary") {
-    return "#BA985D";
-  } else {
-    return "#FFFFFF";
-  }
-};
-
-const Button = ({ theme, text, disabled = false, caret }: ButtonInterface) => {
+const Button = ({ theme, text, disabled = false, caret, icon }: ButtonInterface) => {
   const mode = `button--${theme}`;
-  const iconColor = getIconColor(theme, disabled);
 
   return (
     <button
@@ -34,8 +20,9 @@ const Button = ({ theme, text, disabled = false, caret }: ButtonInterface) => {
       className={['button', mode, disabled && `${mode}--disabled`].join(' ')}
     >
       <div className='button--text-container'>
+        {icon && <div className='icon--container'> {icon} </div>}
         {text}
-        {caret && <div className='button--caret'> <CaretIcon color={iconColor}/> </div>}
+        {caret && <div className='caret--container'> <CaretIcon /> </div>}
       </div>
     </button>
   );
