@@ -18,9 +18,10 @@
   height: 30px;
   border-radius: 5px;
   border: 0;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+}
+
+.button--block {
+  width: 100%;
 }
 
 .button--primary {
@@ -47,7 +48,6 @@
   border: 1px solid var(--gold-color);
 }
 
-
 .button--secondary--disabled {
   background: var(--gray-light-color);
   border-color: var(--gray-dark-color);
@@ -63,6 +63,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .caret--container {
