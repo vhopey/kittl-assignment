@@ -1,6 +1,6 @@
 import { Caret } from '../../icons';
 
-import './Button.css';
+import './styles.css';
 import '../../index.css';
 
 interface ButtonInterface {
