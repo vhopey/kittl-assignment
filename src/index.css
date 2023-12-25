@@ -1,4 +1,6 @@
 @font-face {
-  font-family: 'Inter';
-  src: local('Inter'), url(./fonts/Inter-SemiBold.ttf) format('opentype');
+  font-family: "Inter";
+  src:
+    local("Inter"),
+    url(./fonts/Inter-SemiBold.ttf) format("opentype");
 }

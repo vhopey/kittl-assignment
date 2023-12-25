@@ -1,4 +1,4 @@
-import './styles.css';
+import "./styles.css";
 
 interface SliderInterface {
   max: number;
@@ -6,9 +6,9 @@ interface SliderInterface {
   name: string;
   value: number;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-};
+}
 
-const Slider = ({max, min, name, value, onChange}: SliderInterface) => (
+const Slider = ({ max, min, name, value, onChange }: SliderInterface) => (
   <input
     className="range"
     type="range"

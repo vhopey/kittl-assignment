@@ -1,63 +1,63 @@
-import Button from '../components/Button';
-import { Caret, Bookmark } from '../icons';
+import Button from "../components/Button";
+import { Caret, Bookmark } from "../icons";
 
-const icons = { bookmark: <Bookmark />, caret: <Caret /> }
+const icons = { bookmark: <Bookmark />, caret: <Caret /> };
 
 export default {
-  title: 'Button',
+  title: "Button",
   args: {
-    theme: 'primary',
-    text: 'Button',
-    onClick: () => alert('click!')
+    theme: "primary",
+    text: "Button",
+    onClick: () => alert("click!"),
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
     icon: {
       options: Object.keys(icons),
       mapping: icons,
       control: {
-        type: 'select',
+        type: "select",
         labels: {
-          bookmark: 'Bookmark icon',
-          caret: 'Caret icon',
+          bookmark: "Bookmark icon",
+          caret: "Caret icon",
         },
       },
     },
     onClick: {
-      control: 'none'
-    }
+      control: "none",
+    },
   },
   component: Button,
-}
+};
 
-export const Primary = {} 
+export const Primary = {};
 
 export const Secondary = {
   args: {
-    theme: 'secondary',
-    text: 'Button',
+    theme: "secondary",
+    text: "Button",
   },
 };
 
 export const WithCaret = {
   args: {
-    theme: 'secondary',
-    text: 'Button',
-    caret: true
+    theme: "secondary",
+    text: "Button",
+    caret: true,
   },
 };
 
 export const WithIcon = {
   args: {
-    theme: 'secondary',
-    text: 'Button',
-    icon: <Bookmark />
+    theme: "secondary",
+    text: "Button",
+    icon: <Bookmark />,
   },
 };
 
 export const BlockButton = {
   args: {
-    text: 'Button',
+    text: "Button",
     block: true,
   },
 };

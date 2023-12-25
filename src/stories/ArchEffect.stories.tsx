@@ -1,8 +1,8 @@
-import ArchEffect from '../components/ArchEffect/index';
+import ArchEffect from "../components/ArchEffect/index";
 
 export default {
-  title: 'ArchEffect',
-  component: ArchEffect
+  title: "ArchEffect",
+  component: ArchEffect,
 };
 
 export const Primary = {};

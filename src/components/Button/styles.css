@@ -1,15 +1,15 @@
 :root {
-  --white-color: #FFFFFF;
-  --gray-color: #E2E2E2;
-  --gray-light-color: #EFEFEF;
+  --white-color: #ffffff;
+  --gray-color: #e2e2e2;
+  --gray-light-color: #efefef;
   --gray-dark-color: #979797;
-  --gold-color: #BA985D;
-  --gold-light-color: #D4B57F;
-  --gold-white-color: #FFFBF5;
+  --gold-color: #ba985d;
+  --gold-light-color: #d4b57f;
+  --gold-white-color: #fffbf5;
 }
 
 .button {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: 12px;
   line-height: 15px;
   cursor: pointer;

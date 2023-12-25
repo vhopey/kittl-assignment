@@ -1,11 +1,11 @@
-import { Caret } from '../../icons';
+import { Caret } from "../../icons";
 
-import './styles.css';
-import '../../index.css';
+import "./styles.css";
+import "../../index.css";
 
 interface ButtonInterface {
   /** Theme of button */
-  theme: 'primary' | 'secondary';
+  theme: "primary" | "secondary";
 
   /** Text of button */
   text: string;
@@ -24,7 +24,7 @@ interface ButtonInterface {
 
   /** Set the icon component of button */
   icon?: JSX.Element;
-};
+}
 
 const Button = ({
   theme,
@@ -33,20 +33,29 @@ const Button = ({
   disabled = false,
   block = false,
   caret,
-  icon
+  icon,
 }: ButtonInterface) => {
   const mode = `button--${theme}`;
 
   return (
     <button
       type="button"
-      className={['button', mode, block && 'button--block', disabled && `${mode}--disabled`].join(' ')}
+      className={[
+        "button",
+        mode,
+        block && "button--block",
+        disabled && `${mode}--disabled`,
+      ].join(" ")}
       onClick={onClick}
     >
-      <div className='button--text-container'>
-        {icon && <div className='icon--container'> {icon} </div>}
+      <div className="button--text-container">
+        {icon && <div className="icon--container"> {icon} </div>}
         {text}
-        {caret && <div className='caret--container'> <Caret /> </div>}
+        {caret && (
+          <div className="caret--container">
+            <Caret />
+          </div>
+        )}
       </div>
     </button>
   );
