@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect } from "react";
-// @ts-ignore
 import Warp from "warpjs";
 import Slider from "../Slider";
 
@@ -7,8 +6,9 @@ import './styles.css';
 
 const ArchEffect = () => {
   const [value, setValue] = useState(0);
-  const [warp, setWarp] = useState(null);
-  const svgRef = useRef(null);
+  const [prevValue, setPrevValue] = useState(0);
+  const [warp, setWarp] = useState<Warp | null>(null);
+  const svgRef = useRef<SVGSVGElement | null>(null);
 
   useEffect(()=> {
     if(svgRef?.current !== null) {
@@ -17,12 +17,26 @@ const ArchEffect = () => {
   }, [svgRef])
 
   const onSlideChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if(!warp) {
+      return;
+    }
+
     const value = event.target.valueAsNumber;
-    // @ts-ignore
-    warp.interpolate(4);
-    // @ts-ignore
-    warp.transform(([ x, y ]) => [ x, y + 4 * Math.sin(x / value) ]);
+    const archValue = value > 0 ? 120 : -120;
+
+    if(!prevValue) {
+      warp.interpolate(120);
+      warp.transform(([ x, y ]) => [ x, y + 4 * Math.sin(x / archValue) ]);
+    };
+
+    if(Math.abs(value) > Math.abs(prevValue)) {
+      warp.transform(([ x, y ]) => [ x, y + 4 * Math.sin(x / archValue) ]);
+    } else {
+      warp.transform(([ x, y ]) => [ x, y - 4 * Math.sin(x / archValue) ]);
+    };
+
     setValue(value);
+    setPrevValue(value);
   };
 
   return(
