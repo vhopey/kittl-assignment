@@ -1,5 +1,6 @@
 const Caret = () => (
   <svg
+    data-testid="caret-icon"
     width="5"
     height="8"
     viewBox="0 0 5 8"

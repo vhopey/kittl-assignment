@@ -1,5 +1,6 @@
 const Bookmark = () => (
   <svg
+    data-testid="bookmark-icon"
     width="10"
     height="12"
     viewBox="0 0 10 12"

@@ -40,6 +40,7 @@ const Button = ({
   return (
     <button
       type="button"
+      disabled={disabled}
       className={[
         "button",
         mode,

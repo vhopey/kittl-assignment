@@ -12,6 +12,7 @@ const Slider = ({ max, min, name, value, onChange }: SliderInterface) => (
   <input
     className="range"
     type="range"
+    alt="input-range"
     max={max}
     min={min}
     name={name}
